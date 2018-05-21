@@ -52,6 +52,7 @@ func (s *server) start(t *testing.T, p int) {
 
 func (s *server) stop() {
 	s.s.Stop()
+	s.startErr = nil
 }
 
 func (s *server) wait(t *testing.T, timeout time.Duration) {
